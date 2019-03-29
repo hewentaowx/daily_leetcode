@@ -75,4 +75,35 @@ const addTwoNumbers = (l1, l2) => {
   return dummyH.next;
 };
 
-console.log(addTwoNumbers([2,4,3], [5,6,4]));
+/**
+ * 题目介绍：
+ * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+ * 示例：
+ * 输入: "abcabcbb"
+ * 输出: 3
+ * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+ * 输入: "bbbbb"
+ * 输出: 1
+ * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
+ */
+
+ /**
+  * 解答：
+  * @param {string} str
+  * @returns {number}
+  */
+const lengthOfLongestSubstring = str => {
+  let maxLen = 0;
+  let start = 0;
+  let end = 0;
+  for (; end < str.length; end++) {
+    let indexOf = str.substring(start, end).indexOf(str.charAt(end));
+    if (indexOf !== -1) {
+      maxLen = Math.max(maxLen, end - start);
+      start += indexOf + 1;
+    }
+  }
+  return Math.max(maxLen, end - start);
+};
+
+console.log(lengthOfLongestSubstring('abcabcbb'));
