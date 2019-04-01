@@ -1,4 +1,4 @@
-[两数之和](#两数之和)
+[两数之和](#two-sum)
 
 ```javascript
 /**
@@ -34,7 +34,7 @@ console.log('正确结果应该是[0, 3]---->>>>', towSum([1, 2, 4, 6], 7));
 console.log('正确结果应该是[]---->>>>', towSum([1, 2, 4, 6], 0));
 ```
 
-[链表两数之和](#链表两数之和)
+[链表两数之和](#node-two-numbers)
 
 ```javascript
 /**
@@ -82,7 +82,7 @@ const addTwoNumbers = (l1, l2) => {
 };
 ```
 
-[最长无重复字符子串](#最长无重复字符子串)
+[最长无重复字符子串](#longest-substring)
 
 ```javascript
 /**
@@ -126,7 +126,7 @@ const lengthOfLongestSubstring = s => {
 console.log(lengthOfLongestSubstring('abcabcbb'));
 ```
 
-[有序数组中位数](#有序数组中位数)
+[有序数组中位数](#median-sort-array)
 
 ```javascript
 /**
@@ -161,7 +161,7 @@ const findMedianSortedArrays = (nums1, nums2) => {
 console.log(findMedianSortedArrays([1, 2, 3], [2]));
 ```
 
-[最长回文字串](#最长回文字串)
+[最长回文字串](#longest-palindrome)
 
 ```javascript
 /**
