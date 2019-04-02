@@ -34,7 +34,9 @@ console.log('正确结果应该是[0, 3]---->>>>', towSum([1, 2, 4, 6], 7));
 console.log('正确结果应该是[]---->>>>', towSum([1, 2, 4, 6], 0));
 ```
 
-### 链表两数之和 <div id="node-two-numbers"></div>
+<div id="node-two-numbers"></div>
+
+### 链表两数之和
 
 ```javascript
 /**
