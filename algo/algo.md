@@ -1,4 +1,4 @@
-[两数之和](#two-sum)
+### 两数之和 <div id="tow-sum"></div>
 
 ```javascript
 /**
@@ -34,7 +34,7 @@ console.log('正确结果应该是[0, 3]---->>>>', towSum([1, 2, 4, 6], 7));
 console.log('正确结果应该是[]---->>>>', towSum([1, 2, 4, 6], 0));
 ```
 
-[链表两数之和](#node-two-numbers)
+###链表两数之和<div id="node-two-numbers"></div>
 
 ```javascript
 /**
