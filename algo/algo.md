@@ -30,10 +30,6 @@ const towSum = (nums, target) => {
   }
   return temp_arr;
 };
-
-console.log('正确结果应该是[0, 1]---->>>>', towSum([2, 7, 11, 15], 9));
-console.log('正确结果应该是[0, 3]---->>>>', towSum([1, 2, 4, 6], 7));
-console.log('正确结果应该是[]---->>>>', towSum([1, 2, 4, 6], 0));
 ```
 
 <div id="node-two-numbers"></div>
@@ -128,8 +124,6 @@ const lengthOfLongestSubstring = s => {
   //     return Math.max(r, i - left + 1);
   //   }, 0);
 };
-
-console.log(lengthOfLongestSubstring('abcabcbb'));
 ```
 
 <div id="median-sort-array"></div>
@@ -165,8 +159,6 @@ const findMedianSortedArrays = (nums1, nums2) => {
     return nums[Math.floor(length / 2)];
   }
 };
-
-console.log(findMedianSortedArrays([1, 2, 3], [2]));
 ```
 
 <div id="longest-palindrome"></div>
@@ -188,7 +180,26 @@ console.log(findMedianSortedArrays([1, 2, 3], [2]));
  * @param {string} s
  * @returns {string}
  */
-const longestPalindrome = function(s) {
-    
+const longestPalindrome = s => {
+  let start = 0;
+  let maxlength = 0;
+  let p = [];
+  for(let i = 0; i < s.length; i++){
+    for(let j = 0; j < i + 1; j++){
+      if (p[j] === undefined) {
+        p[j] = [];
+      }
+      if(i - j < 2) {
+        p[j][i] = s[i] === s[j];
+      } else {
+        p[j][i] = (p[j + 1][i-1] && s[j] === s[i]);
+      }
+      if (p[j][i] && maxlength < i -j + 1) { //判断为回文串且长度大于最大
+        start = j;
+        maxlength = i -j + 1;
+      }
+    }
+  }
+  return s.substr(start, maxlength)
 };
 ```
